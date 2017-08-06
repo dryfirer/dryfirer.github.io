@@ -27,8 +27,8 @@
       }
 
       function step1() {
+        document.getElementById("status").textContent = 'Stand by';
         if (document.getElementById("standby").checked) {
-          document.getElementById("status").textContent = 'Stand by';
           stand_by_signal.play();
           timer_id = setTimeout(step2, Math.random() * 3000 + 1500);
         } else {
@@ -153,7 +153,7 @@
   </ul>
   <div id="status">Stopped</div>
   <p><input id="buttonStart" type="button" value="Start" autofocus onclick="start();"/>
-  <input id="buttonStop" type="button" value="Stop" onclick="stop();"/>
+  <input id="buttonStop" type="button" value="Stop" onclick="stop();" disabled="disabled"/>
   </form>
   
   <p><a href="https://dryfirer.github.io">Direct link</a>, <a href="https://github.com/dryfirer/dryfirer.github.io">source code</a>.
